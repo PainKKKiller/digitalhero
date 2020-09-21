@@ -1,7 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const UglifyEsPlugin = require('uglify-es-webpack-plugin');
 
 
 
@@ -71,11 +71,9 @@ module.exports = {
         ]
     },
     optimization: {
-        minimizer: [new UglifyJSPlugin({
-            uglifyOptions: {
-                output: {
-                    comments: false // use it for removing comments like "/*! ... */"
-                }
+        minimizer: [new UglifyEsPlugin({
+            compress: {
+                drop_console: true
             }
         })]
     },
