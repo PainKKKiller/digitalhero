@@ -1,0 +1,87 @@
+
+.container {
+    /* background-color: #E5E5E5; */
+    padding: 24px;
+}
+
+.card {
+    background-color: white;
+    width: 200px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 250px;
+    
+    align-items: center;
+}
+
+.statItem:first-child {
+    margin-left: 0;
+}
+
+/* .statItem:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+ */
+
+.statItem {
+    height: 273px;
+    min-width: 250px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.13);
+    .circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    h1 {
+        margin-top: 20px;
+        font-size: 55px;
+        line-height: 30px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    p {
+        font-size: 20px;
+        text-align: center;
+        color: #232323;
+        opacity: 0.4;
+        margin: 4px 0;
+    }
+    .redTxt {
+        color: red;
+        text-align: center;
+    }
+}
+
+.grafic {
+    background-color:white;
+    border-radius: 6px;
+    margin: 10px;
+    height: 273px;
+    width: 620px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.red {
+    background-color: #FFCCC7;
+}
+
+.green {
+    background-color: #D9F7BE;
+}
+
+.blue {
+    background-color: #BAE7FF;
+}
+
+.pngicon {
+    display: block;
+    margin: 35px auto;
+}
