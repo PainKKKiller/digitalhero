@@ -1,0 +1,55 @@
+.container {
+    padding: 24px;
+}
+
+.map {
+    background-color: white;
+    width: 1170px;
+    height: 630px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.leaflet {
+    width: 900px;
+    height: 410px;
+}
+
+.mapheader {
+    height: 70px;
+    width: 100%;
+    padding-top: 24px;
+    display: flex;
+}
+
+.legend {
+   padding-left: 320px; 
+}
+
+.badge {
+    padding-right: 20px;
+}
+
+.rightsider {
+    width: 270px;
+    height: 630px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.opal {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #232323;
+    opacity: 0.4;
+}
+
+.headertitle {
+    margin-left: 30px;
+}
+
