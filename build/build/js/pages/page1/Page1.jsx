@@ -212,16 +212,16 @@ class Page1 extends Component {
           <h1>Аналитическая сводка</h1>
           <div className={s.stat}>
             <div className={s.statItem}>
-              {/* <div className={cx(s.circle, s.red)}/> */}
-              <img className={s.pngicon} src={Attention} alt=""/>
-              <h1>{this.state.stats.dtp_count}</h1>
-              <p>всего ДТП</p>
-              <div className={s.redTxt}><Icon type="caret-up"/>22</div>
+              <img style={{ visibility: 'hidden' }} className={s.pngicon} src={Ruble} alt=""/>
+              <h1>4087</h1>
+              <p>всего ДТП за 2019</p>
             </div>
             <div className={s.statItem}>
-              <img className={s.pngicon} src={Ruble} alt=""/>
-              <h1>{`${this.state.stats.total_money}млн`}</h1>
-              <p> </p>
+              {/* <div className={cx(s.circle, s.red)}/> */}
+              <img className={s.pngicon} src={Attention} alt=""/>
+              <h1>4538</h1>
+              <p>всего ДТП за 2020</p>
+             {/*  <div className={s.redTxt}><Icon type="caret-up"/>22</div> */}
             </div>
             <div className={s.grafic}>
               {/* <Chart options={options} series={series} type="bar" height="250" /> */}
