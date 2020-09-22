@@ -19,6 +19,8 @@ import s from './Page1.scss';
 import Attention from 'assets/attention.png';
 import Ruble from 'assets/ruble.png';
 
+import Graphic from 'assets/graphic.png';
+
 
 class Page1 extends Component {
 
@@ -113,12 +115,10 @@ class Page1 extends Component {
   };
 
   onClick = record => {
-    console.log('click', record);
     this.props.history.push(`/dashboard/dtp/${record.id}`);
   }
 
   handleTableChange = (pagination, filters, sorter) => {
-    console.log('handleTableChange', pagination);
     this.fetch({
       sortField: sorter.field,
       sortOrder: sorter.order,
@@ -132,7 +132,7 @@ class Page1 extends Component {
     const offset = params.pagination.current === 1 ? 0 : (params.pagination.current - 1) * 10;
     axios.get(`http://34.71.1.184/api/dtp/?offset=${offset}&limit=10`)
     .then(resp => {
-      console.log(resp);
+      // console.log(resp);
       this.setState({ 
         dtps: resp.data.results,
         loading: false,
@@ -187,16 +187,6 @@ class Page1 extends Component {
         key: 'place',
         ...this.getColumnSearchProps('place'),
       },
-     /*  {
-        title: 'Степень тяжести',
-        dataIndex: 'deaths',
-        key: 'deaths',
-        render: (text, record) => {
-          console.log('render', text, record);
-          return `${text} погибло, ${record.wounded} ранено`;
-        },
-        ...this.getColumnSearchProps('deaths'),
-      }, */
     ];
     const options = {
       labels: Object.keys(this.state.defects_for_hist),
@@ -234,7 +224,8 @@ class Page1 extends Component {
               <p> </p>
             </div>
             <div className={s.grafic}>
-              <Chart options={options} series={series} type="bar" height="250" />
+              {/* <Chart options={options} series={series} type="bar" height="250" /> */}
+              <img width={610} height={260} src={Graphic} alt=""/>
             </div>
           </div>
           <h1>Улицы</h1>
