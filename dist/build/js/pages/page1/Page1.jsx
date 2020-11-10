@@ -36,7 +36,7 @@ class Page1 extends Component {
   };
 
   componentDidMount() {
-    axios.get('http://65.227.132.216:8080/api/dtp/?offset=0&limit=10')
+    axios.get('http://165.227.132.216:8080/api/dtp/?offset=0&limit=10')
     .then(resp => {
       // console.log(resp.data.results);
       const stats = this.makeStat(resp.data);
@@ -130,7 +130,7 @@ class Page1 extends Component {
   fetch = (params = {}) => {
     this.setState({ loading: true });
     const offset = params.pagination.current === 1 ? 0 : (params.pagination.current - 1) * 10;
-    axios.get(`http://65.227.132.216:8080/api/dtp/?offset=${offset}&limit=10`)
+    axios.get(`http://165.227.132.216:8080/api/dtp/?offset=${offset}&limit=10`)
     .then(resp => {
       console.log(resp);
       this.setState({ 

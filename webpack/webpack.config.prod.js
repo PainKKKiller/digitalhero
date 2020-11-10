@@ -7,7 +7,6 @@ const UglifyEsPlugin = require('uglify-es-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-
     module: {
         rules: [{
                 test: /\.(js)$/,

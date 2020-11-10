@@ -45,7 +45,7 @@ class Geo extends Component {
     }
 
     componentWillMount() {
-      axios.get('http://65.227.132.216:8080/api/dtp/?fields=id,latitude,longitude,deaths,child_deaths,wounded,child_wounded&date__gte=2019-01-01&limit=13175').then(resp => {
+      axios.get('http://165.227.132.216:8080/api/dtp/?fields=id,latitude,longitude,deaths,child_deaths,wounded,child_wounded&date__gte=2019-01-01&limit=13175').then(resp => {
           console.log('data', resp.data.results);
           this.setState({ data: this.transformData(resp.data.results) });
       })

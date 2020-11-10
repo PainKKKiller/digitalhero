@@ -41,7 +41,7 @@ class Page2 extends Component {
   }
 
   componentWillMount() {
-    axios.get(`http://65.227.132.216:8080/api/dtp/${this.props.match.params.id}`).then(resp => {
+    axios.get(`http://165.227.132.216:8080/api/dtp/${this.props.match.params.id}`).then(resp => {
         console.log('data', resp.data);
         this.setState({ lat: resp.data.longitude, lng: resp.data.latitude, data: resp.data })
     })

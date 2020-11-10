@@ -13,7 +13,7 @@ export default class SideDtp extends Component {
     componentWillReceiveProps(nextProps) {
         // console.log('componentWillReceiveProps', nextProps, this.props);
         if(nextProps.data.id !== this.props.data.id) {
-            axios.get(`http://65.227.132.216:8080/api/dtp/${nextProps.data.id}`).then(resp => {
+            axios.get(`http://165.227.132.216:8080/api/dtp/${nextProps.data.id}`).then(resp => {
                 // console.log('data', resp.data);
                 this.setState({ data: resp.data });
             })
