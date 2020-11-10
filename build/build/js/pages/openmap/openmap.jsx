@@ -25,8 +25,8 @@ export default class OpenMap extends PureComponent {
 
     componentWillMount() {
         this.updateDimensions();
-        // axios.get('http://34.71.1.184/api/dtp/?fields=id,latitude,longitude,deaths,child_deaths,wounded&date__gte=2019-01-01&limit=13175').then(resp => {
-        axios.get('http://34.71.1.184/api/dtp-places/?format=json&limit=20000').then(resp => {
+        // axios.get('http://65.227.132.216:8080/api/dtp/?fields=id,latitude,longitude,deaths,child_deaths,wounded&date__gte=2019-01-01&limit=13175').then(resp => {
+        axios.get('http://65.227.132.216:8080/api/dtp-places/?format=json&limit=20000').then(resp => {
             console.log('data', resp.data.results);
             this.setState({ data: resp.data.results });
         })
